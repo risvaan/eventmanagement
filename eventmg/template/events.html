@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Events
+{% endblock %}
+
+        {%block content%}
+<h2 class="text-center">EVENTS</h2>
+<div class="container">
+         {% for i in eve %}
+        <div class="card text-center" style="width: 20rem; display:inline-block;margin: 20px;">
+                <img src="{{i.img.url}}" class="card-img-top" alt="Card image cap" height="150px" width="200px">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.name}}</h5>
+                  <p class="card-text">{{i.desc}}</p>
+                </div>
+              </div>
+              {% endfor %}
+              <!-- <div class="card text-center" style="width: 18rem; display:inline-block;margin: 20px;">
+                <img src="{% static 'images/birthday1.jpeg' %}" class="card-img-top" alt="Card image cap" height="150px" width="200px">
+                <div class="card-body">
+                  <h5 class="card-title">birthday</h5>
+                  <p class="card-text">Life's too short to not celebrate every chance you get! We promise to give you memorable events. join with us..</p>
+                </div>
+              </div>
+              <div class="card text-center" style="width: 18rem; display:inline-block;margin: 20px;">
+                <img src="{% static 'images/event2.jpg' %}" class="card-img-top" alt="Card image cap" height="150px" width="200px">
+                <div class="card-body">
+                  <h5 class="card-title">dj party</h5>
+                  <p class="card-text">Let the beats do the talking! We promise to give you memorable events. join with us..</p>
+                </div>
+              </div> -->
+</div>
+        
+{% endblock %}
